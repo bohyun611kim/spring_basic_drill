@@ -1,6 +1,7 @@
 package com.fastcampus.ch2.exception;
 
 
+import java.io.FileNotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -27,7 +28,7 @@ public class ExceptionController {
 
     @RequestMapping("/ex2")
     public String main2() throws Exception {
-        throw new NullPointerException("ex 예외가 발생하였습니다.");
+        throw new FileNotFoundException("ex 예외가 발생하였습니다."); // 예외 조상이 처리한다.
     }
 
 }
