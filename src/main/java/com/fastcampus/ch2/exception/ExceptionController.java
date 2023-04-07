@@ -10,16 +10,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ExceptionController {
 
-    @ExceptionHandler(NullPointerException.class)
+    @ExceptionHandler({NullPointerException.class, FileNotFoundException.class })
     public String catcher2(Exception ex, Model model) {
         model.addAttribute("ex", ex);
         return "error";
     }
-
+    /*
     @ExceptionHandler(Exception.class)
     public String catcher(Exception ex) {
         return "error";
-    }
+    } */
 
     @RequestMapping("/ex")
     public String main() throws Exception {
