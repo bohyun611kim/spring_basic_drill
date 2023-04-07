@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-@ControllerAdvice
+@ControllerAdvice("com.fastcampus.ch2") // 지정된 공통예외처리 가능
 public class GlobalCatcher {
 
     @ExceptionHandler({NullPointerException.class, FileNotFoundException.class })

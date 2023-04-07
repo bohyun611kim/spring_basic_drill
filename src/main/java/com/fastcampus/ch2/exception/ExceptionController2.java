@@ -19,6 +19,7 @@ public class ExceptionController2 {
 
     @RequestMapping("/ex4")
     public String main2() throws Exception {
+        System.out.println("--- /ex4");
         throw new FileNotFoundException("ex 예외가 발생하였습니다.");
     }
 
