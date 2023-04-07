@@ -1,0 +1,17 @@
+# Maven
+log/
+target/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+src/main/resources/META-INF/
+src/main/webapp/WEB-INF/classes/
+src/main/webapp/resources/
+src/test/java/
