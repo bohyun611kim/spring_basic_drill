@@ -5,8 +5,8 @@
 	<title>Home</title>
 </head>
 <body>
-<h1>
-	Hello world!  
+<h1 style="color: cadetblue">
+	SPRING COE DEMO
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
