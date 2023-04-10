@@ -1,6 +1,8 @@
 package com.fastcampus.ch2;
 
 import java.util.Arrays;
+import java.util.Date;
+import org.springframework.format.annotation.DateTimeFormat;
 
 public class User {
 
@@ -8,7 +10,7 @@ public class User {
     private String pwd;
     private String name;
     private String email;
-    private String birth;
+    private Date birth;
     private String[] sns;
 
     public String getId() {
@@ -43,11 +45,11 @@ public class User {
         this.email = email;
     }
 
-    public String getBirth() {
+    public Date getBirth() {
         return birth;
     }
 
-    public void setBirth(String birth) {
+    public void setBirth(Date birth) {
         this.birth = birth;
     }
 
