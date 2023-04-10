@@ -1,9 +1,7 @@
 package com.fastcampus.ch2;
 
 import java.net.URLEncoder;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.beans.propertyeditors.StringArrayPropertyEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,10 +15,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class RegisterController {
 
+    // 클래스 내에서만 적용
     @InitBinder
     public void toDate(WebDataBinder binder) {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        binder.registerCustomEditor(Date.class, new CustomDateEditor(df, false));
+
+        // 특정필드값 문자열(구분자) --> 배열
+        binder.registerCustomEditor(String[].class, "hobby",
+            new StringArrayPropertyEditor("#"));
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)

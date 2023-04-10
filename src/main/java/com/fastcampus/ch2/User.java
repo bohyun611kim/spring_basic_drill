@@ -10,8 +10,10 @@ public class User {
     private String pwd;
     private String name;
     private String email;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birth;
     private String[] sns;
+    private String[] hobby;
 
     public String getId() {
         return id;
@@ -61,6 +63,14 @@ public class User {
         this.sns = sns;
     }
 
+    public String[] getHobby() {
+        return hobby;
+    }
+
+    public void setHobby(String[] hobby) {
+        this.hobby = hobby;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -68,8 +78,9 @@ public class User {
             ", pwd='" + pwd + '\'' +
             ", name='" + name + '\'' +
             ", email='" + email + '\'' +
-            ", birth='" + birth + '\'' +
+            ", birth=" + birth +
             ", sns=" + Arrays.toString(sns) +
+            ", hobby=" + Arrays.toString(hobby) +
             '}';
     }
 }
